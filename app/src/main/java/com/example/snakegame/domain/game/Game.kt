@@ -20,7 +20,7 @@ class Game(private val scope: CoroutineScope ,
         State(food = Pair(5, 5), snake = listOf(Pair(7, 7)),obstacles = emptyList())
     )
     val state: Flow<State> = mutableState
-    private var remainingTime = if (difficulty == "extreme") 5 else 5 // Extreme: 4 minutes, Normal: 3 minutes
+    private var remainingTime = if (difficulty == "extreme") 240 else 180 // Extreme: 4 minutes, Normal: 3 minutes
     val timeLeft = MutableStateFlow(remainingTime)
     val score = MutableStateFlow(0)
 
